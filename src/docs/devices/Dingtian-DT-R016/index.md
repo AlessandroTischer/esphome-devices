@@ -42,8 +42,8 @@ substitutions:
   fallback_pass: !secret fallback_pass_dt-r016
 
 esphome:
-  name: sprinkler
-  friendly_name: Sprinkler
+  name: ${devicename}
+  friendly_name: ${friendly name} 
 
 esp32:
   board: esp32dev
@@ -51,7 +51,7 @@ esp32:
     type: arduino
 
 external_components:
-  - source: github://AlessandroTischer/dtr0xx_io@master
+  - source: github://kecajtop/dtr0xx_io@master
     refresh: 60s
     components:
       - dtr0xx_io
